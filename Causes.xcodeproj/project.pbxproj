@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50F514C91BADF8D00041A81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514C81BADF8D00041A81D /* AppDelegate.swift */; };
-		50F514CB1BADF8D00041A81D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514CA1BADF8D00041A81D /* ViewController.swift */; };
+		50F514CB1BADF8D00041A81D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514CA1BADF8D00041A81D /* LoginViewController.swift */; };
 		50F514CE1BADF8D00041A81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F514CC1BADF8D00041A81D /* Main.storyboard */; };
 		50F514D01BADF8D00041A81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F514CF1BADF8D00041A81D /* Assets.xcassets */; };
 		50F514D31BADF8D00041A81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F514D11BADF8D00041A81D /* LaunchScreen.storyboard */; };
@@ -42,7 +42,7 @@
 		3636A39A73154116AF07F0AC /* libPods-CausesUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CausesUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F514C51BADF8D00041A81D /* Causes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Causes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F514C81BADF8D00041A81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50F514CA1BADF8D00041A81D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50F514CA1BADF8D00041A81D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		50F514CD1BADF8D00041A81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50F514CF1BADF8D00041A81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50F514D21BADF8D00041A81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				50F514C81BADF8D00041A81D /* AppDelegate.swift */,
-				50F514CA1BADF8D00041A81D /* ViewController.swift */,
+				50F514CA1BADF8D00041A81D /* LoginViewController.swift */,
 				50F514CC1BADF8D00041A81D /* Main.storyboard */,
 				50F514CF1BADF8D00041A81D /* Assets.xcassets */,
 				50F514D11BADF8D00041A81D /* LaunchScreen.storyboard */,
@@ -394,7 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50F514CB1BADF8D00041A81D /* ViewController.swift in Sources */,
+				50F514CB1BADF8D00041A81D /* LoginViewController.swift in Sources */,
 				50F514C91BADF8D00041A81D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +536,7 @@
 			baseConfigurationReference = 990E444FCA57E41DF7725CB1 /* Pods-Causes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Causes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JonathanArlauskas.Causes;
@@ -548,6 +549,7 @@
 			baseConfigurationReference = D23B7D9D4073EA8FE0D9CC4F /* Pods-Causes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Causes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JonathanArlauskas.Causes;
