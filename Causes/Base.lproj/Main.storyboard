@@ -17,27 +17,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vlf-UB-lSI">
-                                <rect key="frame" x="0.0" y="220" width="320" height="30"/>
+                                <rect key="frame" x="5" y="220" width="310" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PBq-0A-6iH">
-                                <rect key="frame" x="0.0" y="258" width="320" height="30"/>
+                                <rect key="frame" x="5" y="258" width="310" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugu-vd-gIg">
-                                <rect key="frame" x="20" y="296" width="146" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRf-zU-R3D">
+                                <rect key="frame" x="5" y="296" width="161" height="30"/>
                                 <state key="normal" title="New User?"/>
                                 <connections>
-                                    <action selector="newUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mIS-Ww-ex6"/>
+                                    <action selector="newUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4o-Sr-Thg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-7o-OgO">
-                                <rect key="frame" x="174" y="296" width="126" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R02-if-IvN">
+                                <rect key="frame" x="184" y="296" width="131" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sE0-0v-4pq"/>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQE-Zm-7p1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,8 +46,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="emailText" destination="vlf-UB-lSI" id="Dqd-MZ-Ewg"/>
-                        <outlet property="loginLabel" destination="cWi-7o-OgO" id="HcO-Bf-ArU"/>
-                        <outlet property="newUserLabel" destination="ugu-vd-gIg" id="MQ3-9g-DQp"/>
+                        <outlet property="loginLabel" destination="R02-if-IvN" id="fph-nF-9KE"/>
+                        <outlet property="newUserLabel" destination="VRf-zU-R3D" id="eg2-qQ-9Qo"/>
                         <outlet property="passwordText" destination="PBq-0A-6iH" id="D44-Ir-hhQ"/>
                     </connections>
                 </viewController>
