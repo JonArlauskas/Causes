@@ -49,11 +49,55 @@
                         <outlet property="loginLabel" destination="R02-if-IvN" id="fph-nF-9KE"/>
                         <outlet property="newUserLabel" destination="VRf-zU-R3D" id="eg2-qQ-9Qo"/>
                         <outlet property="passwordText" destination="PBq-0A-6iH" id="D44-Ir-hhQ"/>
+                        <segue destination="isA-Cm-UxL" kind="show" identifier="loggedIn" id="w4m-qa-LCp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189" y="337"/>
+            <point key="canvasLocation" x="257" y="337"/>
+        </scene>
+        <!--Create Cause View Controller-->
+        <scene sceneID="ps3-EK-qQz">
+            <objects>
+                <viewController id="isA-Cm-UxL" customClass="CreateCauseViewController" customModule="Causes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sat-gb-rGd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lyk-y9-bMY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C9U-Lb-7DC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a Cause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lj-5N-Cnq">
+                                <rect key="frame" x="102" y="34" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZh-Sx-qW2">
+                                <rect key="frame" x="137" y="300" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="printText:" destination="isA-Cm-UxL" eventType="touchUpInside" id="0Cf-XS-a62"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="65b-R8-X5u">
+                                <rect key="frame" x="40" y="137" width="240" height="121"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wMJ-2F-fe1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="textInput" destination="65b-R8-X5u" id="EXr-cJ-dLa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zd-3v-NqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="337"/>
         </scene>
     </scenes>
 </document>
