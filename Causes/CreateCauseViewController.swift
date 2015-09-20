@@ -48,7 +48,7 @@ class CreateCauseViewController: UIViewController, UITextViewDelegate {
 
     
     
-    @IBAction func printText(sender: AnyObject) {
+    @IBAction func saveCause(sender: AnyObject) {
         
         if textInput.text.characters.count != 0 {
             let postRef = self.ref.childByAppendingPath("Causes")
@@ -57,6 +57,7 @@ class CreateCauseViewController: UIViewController, UITextViewDelegate {
             let newCause = [
                 "title": self.causeTitle.text,
                 "description": self.textInput.text
+                //"creator": self.
             ]
             
             post1Ref.setValue(newCause)

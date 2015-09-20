@@ -3,6 +3,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -26,24 +32,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R02-if-IvN">
-                                <rect key="frame" x="209" y="269" width="106" height="30"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQE-Zm-7p1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRf-zU-R3D">
-                                <rect key="frame" x="5" y="269" width="133" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRf-zU-R3D">
+                                <rect key="frame" x="5" y="307" width="310" height="30"/>
                                 <state key="normal" title="New User?">
-                                    <color key="titleColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="newUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4o-Sr-Thg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R02-if-IvN">
+                                <rect key="frame" x="5" y="269" width="310" height="30"/>
+                                <color key="backgroundColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQE-Zm-7p1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Volunteering-100" translatesAutoresizingMaskIntoConstraints="NO" id="Tvr-jx-wzP">
+                                <rect key="frame" x="110" y="56" width="100" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.38361584459999998" green="0.8156983994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -90,14 +100,15 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="65b-R8-X5u">
                                 <rect key="frame" x="40" y="158" width="240" height="121"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZh-Sx-qW2">
-                                <rect key="frame" x="137" y="300" width="46" height="30"/>
+                                <rect key="frame" x="40" y="300" width="240" height="30"/>
+                                <color key="backgroundColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Create">
-                                    <color key="titleColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="printText:" destination="isA-Cm-UxL" eventType="touchUpInside" id="0Cf-XS-a62"/>
@@ -105,19 +116,20 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 Character Limit!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGi-ha-dFI">
                                 <rect key="frame" x="110" y="91" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iED-BW-qZk">
                                 <rect key="frame" x="40" y="120" width="240" height="30"/>
+                                <color key="backgroundColor" red="0.99607849120000003" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a Cause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lj-5N-Cnq">
-                                <rect key="frame" x="102" y="72" width="117" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="95" y="72" width="131" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -125,11 +137,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="wMJ-2F-fe1">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="2B6-tE-5Hy">
+                            <color key="tintColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="logout:" destination="isA-Cm-UxL" id="ArU-3s-iZt"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Browse" id="zT0-PD-kch">
+                            <color key="tintColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="DWG-33-N81" kind="show" id="OKj-dz-Pyc"/>
                             </connections>
@@ -157,13 +171,51 @@
                     <view key="view" contentMode="scaleToFill" id="15h-oX-Pl7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Gz-0i-g9u">
+                                <rect key="frame" x="40" y="233" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJo-ed-afs">
+                                <rect key="frame" x="40" y="209" width="240" height="21"/>
+                                <color key="backgroundColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfW-FE-sgX">
+                                <rect key="frame" x="40" y="439" width="50" height="50"/>
+                                <state key="normal" image="Close Window"/>
+                                <connections>
+                                    <action selector="decline:" destination="DWG-33-N81" eventType="touchUpInside" id="ZrU-iJ-PIt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-8W-eHT">
+                                <rect key="frame" x="230" y="439" width="50" height="50"/>
+                                <state key="normal" image="Helping Hand-100 (1)"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.38361584459999998" green="0.8156983994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="causeInfo" destination="8Gz-0i-g9u" id="LgB-We-wQI"/>
+                        <outlet property="causeTitle" destination="hJo-ed-afs" id="Dbk-MF-h9F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2E9-WU-cc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1453" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Close Window" width="100" height="100"/>
+        <image name="Helping Hand-100 (1)" width="100" height="100"/>
+        <image name="Volunteering-100" width="100" height="100"/>
+    </resources>
+    <color key="tintColor" red="0.75857687250000005" green="0.41595273310000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

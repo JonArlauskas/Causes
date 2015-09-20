@@ -9,20 +9,8 @@
 import Foundation
 
 class CauseObject: NSObject {
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
+    var title : String?
+    var info : String?
+ 
 }
