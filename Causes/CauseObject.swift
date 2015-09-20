@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class CauseObject: NSObject {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

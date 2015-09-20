@@ -78,11 +78,11 @@ class LoginViewController: UIViewController {
         ref.authUser(emailText.text!, password: passwordText.text!,
             withCompletionBlock: { error, authData in
                 if error != nil {
-                     print("-----Incorrect info-----")
+                    print("-----Incorrect info-----")
                     self.displayAlert("Error!", message: "Incorrect login information!")
                 } else {
                     print("-----Logged in-----")
-                    self.performSegueWithIdentifier("loggedIn", sender: self)
+                    self.dismissViewControllerAnimated(true, completion: nil)
                 }
         })
         
@@ -112,7 +112,6 @@ class LoginViewController: UIViewController {
     //------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5015AD9E1BAE1608007AC26D /* CauseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015AD9D1BAE1608007AC26D /* CauseObject.swift */; settings = {ASSET_TAGS = (); }; };
 		5015ADA01BAE1839007AC26D /* CreateCauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015AD9F1BAE1839007AC26D /* CreateCauseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5015ADA21BAE30F5007AC26D /* BrowseCausesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015ADA11BAE30F5007AC26D /* BrowseCausesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		50F514C91BADF8D00041A81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514C81BADF8D00041A81D /* AppDelegate.swift */; };
 		50F514CB1BADF8D00041A81D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514CA1BADF8D00041A81D /* LoginViewController.swift */; };
 		50F514CE1BADF8D00041A81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F514CC1BADF8D00041A81D /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		3636A39A73154116AF07F0AC /* libPods-CausesUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CausesUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5015AD9D1BAE1608007AC26D /* CauseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CauseObject.swift; sourceTree = "<group>"; };
 		5015AD9F1BAE1839007AC26D /* CreateCauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCauseViewController.swift; sourceTree = "<group>"; };
+		5015ADA11BAE30F5007AC26D /* BrowseCausesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseCausesViewController.swift; sourceTree = "<group>"; };
 		50F514C51BADF8D00041A81D /* Causes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Causes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F514C81BADF8D00041A81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50F514CA1BADF8D00041A81D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5015ADA31BAE479A007AC26D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5015AD9D1BAE1608007AC26D /* CauseObject.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5015ADA41BAE47A0007AC26D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50F514CA1BADF8D00041A81D /* LoginViewController.swift */,
+				5015AD9F1BAE1839007AC26D /* CreateCauseViewController.swift */,
+				5015ADA11BAE30F5007AC26D /* BrowseCausesViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		50F514BC1BADF8D00041A81D = {
 			isa = PBXGroup;
 			children = (
@@ -131,10 +151,9 @@
 		50F514C71BADF8D00041A81D /* Causes */ = {
 			isa = PBXGroup;
 			children = (
-				5015AD9D1BAE1608007AC26D /* CauseObject.swift */,
+				5015ADA41BAE47A0007AC26D /* Controllers */,
+				5015ADA31BAE479A007AC26D /* Models */,
 				50F514C81BADF8D00041A81D /* AppDelegate.swift */,
-				50F514CA1BADF8D00041A81D /* LoginViewController.swift */,
-				5015AD9F1BAE1839007AC26D /* CreateCauseViewController.swift */,
 				50F514CC1BADF8D00041A81D /* Main.storyboard */,
 				50F514CF1BADF8D00041A81D /* Assets.xcassets */,
 				50F514D11BADF8D00041A81D /* LaunchScreen.storyboard */,
@@ -404,6 +423,7 @@
 				50F514CB1BADF8D00041A81D /* LoginViewController.swift in Sources */,
 				5015ADA01BAE1839007AC26D /* CreateCauseViewController.swift in Sources */,
 				50F514C91BADF8D00041A81D /* AppDelegate.swift in Sources */,
+				5015ADA21BAE30F5007AC26D /* BrowseCausesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
