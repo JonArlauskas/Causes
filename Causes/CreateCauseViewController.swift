@@ -17,6 +17,9 @@ class CreateCauseViewController: UIViewController, UITextViewDelegate {
     
     let INPUT_LIMIT = 100
     let ref = Firebase(url: "https://causes.firebaseio.com")
+    let userRef = Firebase(url: " https://causes.firebaseio.com/Users")
+    var user: User?
+    var path : String?
     
     //------------------------
     // MARK: IB outlets
@@ -49,32 +52,63 @@ class CreateCauseViewController: UIViewController, UITextViewDelegate {
     
     
     @IBAction func saveCause(sender: AnyObject) {
-        
         if textInput.text.characters.count != 0 {
             let postRef = self.ref.childByAppendingPath("Causes")
             let post1Ref = postRef.childByAutoId()
             
             let newCause = [
                 "title": self.causeTitle.text,
-                "description": self.textInput.text
-                //"creator": self.
+                "description": self.textInput.text,
+                "creator": self.user?.email
             ]
             
             post1Ref.setValue(newCause)
+            fillMyCause(newCause)
         }
     }
     
+    // Fill user object with current users data
+    func userFill(){
+        ref.observeAuthEventWithBlock { authData in
+            if authData != nil {
+                self.user = User(authData: authData)
+                
+                let temp = self.user?.email
+                let temp1 = temp!.componentsSeparatedByString("@")[0]
+                self.path = temp1.stringByReplacingOccurrencesOfString(".", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            }
+        }
+    }
+    
+    
+    func fillMyCause(input:[String: String!]) {
+        
+        let postRef = self.ref.childByAppendingPath("Users/" + path! + "/MyCauses")
+        let post1Ref = postRef.childByAppendingPath(causeTitle.text)
+        post1Ref.setValue(input)
+        
+    }
+    
     //------------------------
-    // MARK: View delegates
+    // MARK: View lifecycle
     //------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textInput.delegate = self
+        
+        // Puts cursor in top left of textview
+        self.automaticallyAdjustsScrollViewInsets = false
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        userFill()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         // Login transition check
         let user = ref.authData

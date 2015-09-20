@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
     //------------------------
     // MARK: IB outlets and actions
     //------------------------
-    
     @IBOutlet var emailText: UITextField!
     @IBOutlet var passwordText: UITextField!
     
@@ -48,6 +47,13 @@ class LoginViewController: UIViewController {
     // MARK: Actions
     //------------------------
     func signUp() {
+        
+        // Format email for use
+        let temp = self.emailText.text!
+        let temp1 = temp.componentsSeparatedByString("@")[0]
+        let email = temp1.stringByReplacingOccurrencesOfString(".", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        
         ref.createUser(emailText.text!, password: passwordText.text!,
             withValueCompletionBlock: { error, result in
                 if error != nil {
@@ -60,12 +66,11 @@ class LoginViewController: UIViewController {
                     
                     // User data to add to DB
                     let newUser = [
-                        "email": self.emailText.text!,
-                        "causes": []
+                        "email": self.emailText.text!.lowercaseString,
                     ]
                     
                     let postRef = self.ref.childByAppendingPath("Users")
-                    let post1Ref = postRef.childByAutoId()
+                    let post1Ref = postRef.childByAppendingPath("\(email.lowercaseString)")
                     post1Ref.setValue(newUser)
                     self.login()
                 }
@@ -108,7 +113,7 @@ class LoginViewController: UIViewController {
     }
     
     //------------------------
-    // MARK: View delegates
+    // MARK: View lifecycle
     //------------------------
     override func viewDidLoad() {
         super.viewDidLoad()

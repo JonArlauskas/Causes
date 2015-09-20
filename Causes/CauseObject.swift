@@ -12,5 +12,6 @@ class CauseObject: NSObject {
  
     var title : String?
     var info : String?
+    var creator : String?
  
 }
