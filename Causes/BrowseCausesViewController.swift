@@ -69,8 +69,18 @@ class BrowseCausesViewController: UIViewController {
         let post1Ref = postRef.childByAppendingPath(causeTitle.text)
         post1Ref.setValue(newCause)
         
-        
-        
+        count = count! + 1
+        if count == 0 {
+            self.causeInfo.text = ""
+            self.causeTitle.text = " No more nearby causes"
+        }
+        else if count <= causeList.count-1 {
+            setDisplay()
+        } else {
+            self.causeInfo.text = ""
+            self.causeTitle.text = " No nearby causes"
+        }
+
     }
     
     func userFill() {
@@ -87,10 +97,7 @@ class BrowseCausesViewController: UIViewController {
     
     
     func track() {
-        
         ref.observeSingleEventOfType(.Value, withBlock: { snapshot in
-           
-            print("-----.VALUE-----")
             let enumerator = snapshot.children
             while let objs = enumerator.nextObject() as? FDataSnapshot {
             
@@ -106,8 +113,6 @@ class BrowseCausesViewController: UIViewController {
                 print(error.description)
         })
     }
-    
-    
     
     func setDisplay() {
         if causeList.count != 0 {
